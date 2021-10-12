@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/TheLedgerOfJoudi/multisignature-wallet/static/css/main.a617e044.chunk.css",
+    "main.js": "/TheLedgerOfJoudi/multisignature-wallet/static/js/main.d9acb226.chunk.js",
+    "main.js.map": "/TheLedgerOfJoudi/multisignature-wallet/static/js/main.d9acb226.chunk.js.map",
+    "runtime-main.js": "/TheLedgerOfJoudi/multisignature-wallet/static/js/runtime-main.9a78eee7.js",
+    "runtime-main.js.map": "/TheLedgerOfJoudi/multisignature-wallet/static/js/runtime-main.9a78eee7.js.map",
+    "static/js/2.dd4a692a.chunk.js": "/TheLedgerOfJoudi/multisignature-wallet/static/js/2.dd4a692a.chunk.js",
+    "static/js/2.dd4a692a.chunk.js.map": "/TheLedgerOfJoudi/multisignature-wallet/static/js/2.dd4a692a.chunk.js.map",
+    "static/js/3.017cacf2.chunk.js": "/TheLedgerOfJoudi/multisignature-wallet/static/js/3.017cacf2.chunk.js",
+    "static/js/3.017cacf2.chunk.js.map": "/TheLedgerOfJoudi/multisignature-wallet/static/js/3.017cacf2.chunk.js.map",
+    "index.html": "/TheLedgerOfJoudi/multisignature-wallet/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/TheLedgerOfJoudi/multisignature-wallet/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.dd4a692a.chunk.js.LICENSE.txt": "/TheLedgerOfJoudi/multisignature-wallet/static/js/2.dd4a692a.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/TheLedgerOfJoudi/multisignature-wallet/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a78eee7.js",
+    "static/js/2.dd4a692a.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.d9acb226.chunk.js"
+  ]
+}
