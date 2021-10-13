@@ -12,9 +12,8 @@ contract MultiSig {
         bool signedByOwnerTwo;
     }
     Transaction[] public transactions;
-    using SafeMath for uint256;
     
-    constructor (address _owner1, address _owner2) public {
+    constructor (address _owner1, address _owner2) {
         owner1 = _owner1;
         owner2 = _owner2;
     }
@@ -52,11 +51,10 @@ contract MultiSig {
     function withdraw (uint _id) private{
         require (_id <= transactions.length);
         require(address(this).balance >= transactions[_id].amount);
-        Transaction memory transaction = transactions[_id];
-        if(transaction.signedByOwnerOne && transaction.signedByOwnerTwo){
-            transaction.to.transfer(transaction.amount);
-            transaction.amount = 0;
-        }
+        require(transactions[_id].signedByOwnerOne && transactions[_id].signedByOwnerTwo);
+        require(transactions[_id].amount != 0);
+            transactions[_id].to.transfer(transactions[_id].amount);
+            transactions[_id].amount = 0;
     }
     
     fallback() external payable{}
@@ -69,18 +67,7 @@ contract MultiSig {
     function getTransactions() public view returns(Transaction[] memory){
         return transactions;
         }
-    
+        
 }
 
-library SafeMath {
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-        assert(b <= a);
-        return a - b;
-    }
 
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-        uint256 c = a + b;
-        assert(c >= a);
-        return c;
-    }
-}
