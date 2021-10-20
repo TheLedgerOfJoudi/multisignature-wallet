@@ -38,7 +38,7 @@ contract MultiSig {
     }
     
     function approveTransaction (uint _id) public onlyOwner{
-        require (_id <= transactions.length);
+        require (_id < transactions.length);
         if(msg.sender == owner1){
             transactions[_id].signedByOwnerOne = true;    
         }
@@ -49,7 +49,7 @@ contract MultiSig {
     }
     
     function withdraw (uint _id) private{
-        require (_id <= transactions.length);
+        require (_id < transactions.length);
         require(address(this).balance >= transactions[_id].amount);
         require(transactions[_id].signedByOwnerOne && transactions[_id].signedByOwnerTwo);
         require(transactions[_id].amount != 0);
